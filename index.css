@@ -1,0 +1,132 @@
+body{
+    background-image: url("ftm\ backsplash.png");
+    background-size: cover;
+    background-position: center top;   
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all 0.4s;
+}
+.topheader {
+    background-color: tan;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between; /* Ensures left and right alignment */
+    align-items: center; /* Aligns items vertically */
+    padding: 0 1rem; /* Adds some padding for spacing */
+}
+.left{
+    margin-left: 0;
+}
+.right{
+    margin-right: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* navbar styling */
+.navbar{
+    display: flex;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: beige;
+}
+
+/* logo style  */
+.logo img{
+    width: 3rem;
+    height: 3rem;
+    margin-left:auto
+}
+
+.hamburger-menu{
+    padding-right: 1.5rem;
+    cursor: pointer;
+}
+
+.hamburger-menu .line{
+   display: block;
+   width:2.5rem;
+   height: 2px;
+   margin-bottom: 10px;
+   background-color: black;
+   cursor: pointer;
+}
+
+.nav-menu{
+    position: fixed;
+    width: 94%;
+    top: 6rem;
+    left: 18px;
+    background-color: beige;
+    font-weight: 600;
+
+}
+.nav-menu a{
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+}
+.nav-menu a:hover{
+    background-color: white;
+}
+
+.hide{
+    display: none;
+}
+
+/* for Desktop view  */
+@media screen and (min-width:600px){
+    .navbar{
+        justify-content: space-around;
+    }
+    .nav-menu{
+        display: block;
+        position: static;
+        width: auto;
+        margin-right:20px;
+        background: none;
+    }
+    .nav-menu a{
+        display: inline-block;
+        padding: 15px 20px;
+    }
+    .nav-menu a:hover{
+        background-color: white;
+        border-radius: 5px;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+}
+/* Main Content Styling */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;  /* Center the content vertically */
+}
+.main-title {
+    font-family: 'Sans-serif', Verdana;
+    font-size: 3rem;
+    color: brown;
+    margin-bottom: 0.5rem;
+    margin-left: 0;
+}
+
+.subtitle {
+    font-family: 'Sans-serif', Verdana;
+    font-size: 1.5rem;
+    color: brown;
+    margin-right: 2rem;  /* Adds some space to the right */
+    align-self: flex-end;  /* Pushes the subtitle to the right within the flexbox */
+}
+
