@@ -10,12 +10,13 @@ body{
     transition: all 0.4s;
 }
 .topheader {
-    background-color: tan;
+    background-color: grey;
     font-family: sans-serif;
     display: flex;
     justify-content: space-between; /* Ensures left and right alignment */
     align-items: center; /* Aligns items vertically */
     padding: 0 1rem; /* Adds some padding for spacing */
+    height: 40px;
 }
 .left{
     margin-left: 0;
@@ -25,7 +26,7 @@ body{
 }
 a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 1.3rem;
     font-weight: bold;
 }
@@ -37,7 +38,7 @@ a{
     justify-content: space-between;
     align-items: center;
     font-family: sans-serif;
-    background-color: beige;
+    background-color: black;
 }
 
 /* logo style  */
@@ -57,7 +58,7 @@ a{
    width:2.5rem;
    height: 2px;
    margin-bottom: 10px;
-   background-color: black;
+   background-color: white;
    cursor: pointer;
 }
 
@@ -66,7 +67,7 @@ a{
     width: 94%;
     top: 6rem;
     left: 18px;
-    background-color: beige;
+    background-color: black;
     font-weight: 600;
 
 }
@@ -74,9 +75,10 @@ a{
     display: block;
     text-align: center;
     padding: 5px 0;
+    justify-content: center;
 }
 .nav-menu a:hover{
-    background-color: white;
+    background-color: black;
 }
 
 .hide{
@@ -100,7 +102,7 @@ a{
         padding: 15px 20px;
     }
     .nav-menu a:hover{
-        background-color: white;
+        background-color: grey;
         border-radius: 5px;
     }
     .hamburger-menu{
@@ -117,7 +119,7 @@ a{
 .main-title {
     font-family: 'Sans-serif', Verdana;
     font-size: 3rem;
-    color: brown;
+    color: black;
     margin-bottom: 0.5rem;
     margin-left: 0;
 }
@@ -125,7 +127,7 @@ a{
 .subtitle {
     font-family: 'Sans-serif', Verdana;
     font-size: 1.5rem;
-    color: brown;
+    color: black;
     margin-right: 2rem;  /* Adds some space to the right */
     align-self: flex-end;  /* Pushes the subtitle to the right within the flexbox */
 }
