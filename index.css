@@ -1,13 +1,29 @@
-body{
-    background-image: url("ftm\ backsplash.png");
-    background-size: cover;
-    background-position: center top;   
-}
-*{
+body {
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    background-color: steelblue;
     transition: all 0.4s;
+    height: 100vh; /* Ensures body takes full height of the screen */
+}
+
+/* Half-container with two sections: Image and Content */
+.half-container {
+    display: flex;
+    height: 100vh;  /* Full height for the container */
+    width: 100%;  /* Full width of the screen */
+}
+
+/* Image Section */
+.image {
+    flex: 1;
+    background-image: url("ftm backsplash.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    min-height: 100%;  /* Ensures it takes up space */
 }
 .topheader {
     background-color: grey;
@@ -16,7 +32,7 @@ body{
     justify-content: space-between; /* Ensures left and right alignment */
     align-items: center; /* Aligns items vertically */
     padding: 0 1rem; /* Adds some padding for spacing */
-    height: 40px;
+    color: black;
 }
 .left{
     margin-left: 0;
@@ -75,10 +91,9 @@ a{
     display: block;
     text-align: center;
     padding: 5px 0;
-    justify-content: center;
 }
 .nav-menu a:hover{
-    background-color: black;
+    background-color: grey;
 }
 
 .hide{
@@ -109,26 +124,30 @@ a{
         display: none;
     }
 }
-/* Main Content Styling */
 .content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;  /* Center the content vertically */
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: rgba(52, 149, 187, 0.767);
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
 }
+
 .main-title {
     font-family: 'Sans-serif', Verdana;
     font-size: 3rem;
     color: black;
     margin-bottom: 0.5rem;
-    margin-left: 0;
 }
 
 .subtitle {
     font-family: 'Sans-serif', Verdana;
     font-size: 1.5rem;
     color: black;
-    margin-right: 2rem;  /* Adds some space to the right */
-    align-self: flex-end;  /* Pushes the subtitle to the right within the flexbox */
+    align-self: flex-end; /* Aligns the subtitle to the right */
+    width: 100%;  /* Ensures it spans the full width */
+    text-align: right; /* Aligns the text to the right */
 }
-

@@ -1,0 +1,108 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: steelblue;
+    transition: all 0.4s;
+    height: 100vh; /* Ensures body takes full height of the screen */
+}
+
+.topheader {
+    background-color: grey !important;
+    font-family: sans-serif !important;
+    display: flex !important;
+    justify-content: space-between !important; /* Ensures left and right alignment */
+    align-items: center !important; /* Aligns items vertically */
+    padding: 0 1rem !important; /* Adds some padding for spacing */
+    color: black !important;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* navbar styling */
+.navbar{
+    display: flex !important;
+    height: 4rem !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    font-family: sans-serif !important;
+    background-color: black !important;
+}
+
+/* logo style  */
+.logo img{
+    width: 3rem;
+    height: 3rem;
+    margin-left:auto
+}
+
+.hamburger-menu{
+    padding-right: 1.5rem !important;
+    cursor: pointer !important;
+}
+
+.hamburger-menu .line{
+   display: block !important;
+   width:2.5rem !important;
+   height: 2px !important;
+   margin-bottom: 10px !important;
+   background-color: white !important;
+   cursor: pointer !important;
+}
+
+.nav-menu{
+    position: fixed;
+    width: 94%;
+    top: 6rem;
+    left: 18px;
+    background-color: black;
+    font-weight: 600;
+
+}
+.nav-menu a{
+    display: block !important;
+    text-align: center !important;
+    padding: 5px 0 !important;
+}
+.nav-menu a:hover{
+    background-color: grey !important;
+}
+
+.hide{
+    display: none;
+}
+
+/* for Desktop view  */
+@media screen and (min-width:600px){
+    .navbar{
+        justify-content: space-around !important;
+    }
+    .nav-menu{
+        display: block !important;
+        position: static !important;
+        width: auto !important;
+        margin-right:20px !important;
+        background: none !important;
+    }
+    .nav-menu a{
+        display: inline-block !important;
+        padding: 15px 20px !important;
+    }
+    .nav-menu a:hover{
+        background-color: grey !important;
+        border-radius: 5px !important;
+    }
+    .hamburger-menu{
+        display: none !important;
+    }
+}
+.toptext{
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
