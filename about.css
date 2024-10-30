@@ -1,0 +1,122 @@
+/* Global Styles */
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: steelblue;
+    transition: all 0.4s;
+    height: 100vh; /* Ensures body takes full height of the screen */
+}
+
+/* Header Section */
+.topheader {
+    background-color: grey;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between; /* Ensures left and right alignment */
+    align-items: center; /* Aligns items vertically */
+    padding: 0 1rem; /* Adds padding */
+    color: black;
+}
+
+.left {
+    margin-left: 0;
+}
+
+.right {
+    margin-right: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: black;
+}
+
+/* Logo Styling */
+.logo img {
+    width: 3rem;
+    height: 3rem;
+    margin-left: auto;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    padding-right: 1.5rem;
+    cursor: pointer;
+}
+
+.hamburger-menu .line {
+    display: block;
+    width: 2.5rem;
+    height: 2px;
+    margin-bottom: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Nav Menu */
+.nav-menu {
+    position: fixed;
+    width: 94%;
+    top: 6rem;
+    left: 18px;
+    background-color: black;
+    font-weight: 600;
+}
+
+.nav-menu a {
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.nav-menu a:hover {
+    background-color: grey;
+}
+
+.hide {
+    display: none;
+}
+
+/* Desktop View Adjustments */
+@media screen and (min-width: 600px) {
+    .navbar {
+        justify-content: space-around;
+    }
+
+    .nav-menu {
+        display: block;
+        position: static;
+        width: auto;
+        margin-right: 20px;
+        background: none;
+    }
+
+    .nav-menu a {
+        display: inline-block;
+        padding: 15px 20px;
+    }
+
+    .nav-menu a:hover {
+        background-color: grey;
+        border-radius: 5px;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+

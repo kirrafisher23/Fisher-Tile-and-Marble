@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     box-sizing: border-box;
     padding: 0;
@@ -7,102 +8,212 @@ body {
     height: 100vh; /* Ensures body takes full height of the screen */
 }
 
+/* Header Section */
 .topheader {
-    background-color: grey !important;
-    font-family: sans-serif !important;
-    display: flex !important;
-    justify-content: space-between !important; /* Ensures left and right alignment */
-    align-items: center !important; /* Aligns items vertically */
-    padding: 0 1rem !important; /* Adds some padding for spacing */
-    color: black !important;
+    background-color: grey;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between; /* Ensures left and right alignment */
+    align-items: center; /* Aligns items vertically */
+    padding: 0 1rem; /* Adds padding */
+    color: black;
 }
 
-a{
+.left {
+    margin-left: 0;
+}
+
+.right {
+    margin-right: 0;
+}
+
+a {
     text-decoration: none;
     color: white;
     font-size: 1.3rem;
     font-weight: bold;
 }
 
-/* navbar styling */
-.navbar{
-    display: flex !important;
-    height: 4rem !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    font-family: sans-serif !important;
-    background-color: black !important;
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: black;
 }
 
-/* logo style  */
-.logo img{
+/* Logo Styling */
+.logo img {
     width: 3rem;
     height: 3rem;
-    margin-left:auto
+    margin-left: auto;
 }
 
-.hamburger-menu{
-    padding-right: 1.5rem !important;
-    cursor: pointer !important;
+/* Hamburger Menu */
+.hamburger-menu {
+    padding-right: 1.5rem;
+    cursor: pointer;
 }
 
-.hamburger-menu .line{
-   display: block !important;
-   width:2.5rem !important;
-   height: 2px !important;
-   margin-bottom: 10px !important;
-   background-color: white !important;
-   cursor: pointer !important;
+.hamburger-menu .line {
+    display: block;
+    width: 2.5rem;
+    height: 2px;
+    margin-bottom: 10px;
+    background-color: white;
+    cursor: pointer;
 }
 
-.nav-menu{
+/* Nav Menu */
+.nav-menu {
     position: fixed;
     width: 94%;
     top: 6rem;
     left: 18px;
     background-color: black;
     font-weight: 600;
-
-}
-.nav-menu a{
-    display: block !important;
-    text-align: center !important;
-    padding: 5px 0 !important;
-}
-.nav-menu a:hover{
-    background-color: grey !important;
 }
 
-.hide{
+.nav-menu a {
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.nav-menu a:hover {
+    background-color: grey;
+}
+
+.hide {
     display: none;
 }
 
-/* for Desktop view  */
-@media screen and (min-width:600px){
-    .navbar{
-        justify-content: space-around !important;
+/* Desktop View Adjustments */
+@media screen and (min-width: 600px) {
+    .navbar {
+        justify-content: space-around;
     }
-    .nav-menu{
-        display: block !important;
-        position: static !important;
-        width: auto !important;
-        margin-right:20px !important;
-        background: none !important;
+
+    .nav-menu {
+        display: block;
+        position: static;
+        width: auto;
+        margin-right: 20px;
+        background: none;
     }
-    .nav-menu a{
-        display: inline-block !important;
-        padding: 15px 20px !important;
+
+    .nav-menu a {
+        display: inline-block;
+        padding: 15px 20px;
     }
-    .nav-menu a:hover{
-        background-color: grey !important;
-        border-radius: 5px !important;
+
+    .nav-menu a:hover {
+        background-color: grey;
+        border-radius: 5px;
     }
-    .hamburger-menu{
-        display: none !important;
+
+    .hamburger-menu {
+        display: none;
     }
 }
-.toptext{
-    text-align: center;
+
+/* Main Content Styles */
+.toptext {
     color: white;
+    text-align: center;
     font-family: sans-serif;
+}
+
+/* Slider Wrapper */
+.slider-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Horizontally aligns the content */
+    align-items: center; /* Vertically aligns the content */
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+/* Slides Container */
+.slides-container {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.slide {
+    min-width: 100%;
+    height: auto;
+    flex: 0 0 100%; /* Ensure each slide takes up full width */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+/* Image Styling */
+.slide img {
+    max-width: 80%; /* Prevents images from becoming too large */
+    max-height: 80vh; /* Ensures images don’t overflow the viewport */
+    width: auto;      /* Maintain aspect ratio */
+    height: auto;     /* Maintain aspect ratio */
+    object-fit: contain; /* Adjusts image to fit within its container */
+}
+
+/* Adjust Arrow Styles */
+.slide-arrow {
+    position: absolute;
+    top: 50%; /* Centers the arrows vertically */
+    transform: translateY(-50%); /* Perfect vertical centering */
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.slide-arrow:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+#slide-arrow-prev {
+    left: 1rem;
+}
+
+#slide-arrow-next {
+    right: 1rem;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 600px) {
+    .slide-arrow {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    #slide-arrow-prev {
+        left: 0.5rem;
+    }
+
+    #slide-arrow-next {
+        right: 0.5rem;
+    }
+
+    .slide img {
+        max-width: 90%; /* Adjust max width for mobile view */
+    }
 }

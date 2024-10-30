@@ -17,3 +17,4 @@ window.addEventListener('load', () => {
     console.error("Image or content element not found.");
   }
 });
+
