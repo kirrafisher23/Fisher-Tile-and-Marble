@@ -21,7 +21,7 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                    <img src="logo.png"
+                    <img src="images/logo.png"
                          alt="ftmLogo">
                 </a>
             </div>
@@ -32,22 +32,54 @@
             </div>
             <div class="nav-menu hide">
                 <a class="active" href="index.html">Home</a>
-                <a href="showroom.html">Showroom</a>
                 <a href="contact.html">Contact</a>
                 <a href="about.html">About</a>
             </div>
         </nav>
     </header>
 
-    <section class="half-container">
-        <div class="image"></div>
-        <main class="content">
-            <h1 class="main-title">Fisher Tile and Marble</h1>
-            <h2 class="subtitle">Brevard’s Premier Tile Contracting Service</h2>
-            <button onclick="window.location.href='contact.html'">Contact Me</button>
-        </main>
-    </section>
+    <div class="top">
+        <h1>Fisher Tile and Marble</h1>
+        <h1>Brevard’s Premier Tile Contracting Service</h1>
+    </div>
 
+    <section class="slider-wrapper">
+        <button class="slide-arrow" id="slide-arrow-prev">
+          &#8249;
+        </button>
+        
+        <button class="slide-arrow" id="slide-arrow-next">
+          &#8250;
+        </button>
+        
+        <ul class="slides-container" id="slides-container">
+          <li class="slide">
+            <img src="images/1.jpg">
+          </li>
+          <li class="slide">
+            <img src="images/2.jpg">
+          </li>
+          <li class="slide">
+            <img src="images/3.jpg">
+          </li>
+          <li class="slide">
+            <img src="images/4.jpg">
+          </li>
+          <li class="slide">
+            <img src="images/5.jpg">
+          </li>
+          <li class="slide">
+            <img src="images/6.jpg">
+          </li>
+          <li class="slide">
+            <img src="images/7.jpg">
+          </li>
+
+        </ul>
+      </section>
+
+
+    <script src="index.js"></script>
 
     <script src="index.js"></script> <!-- Make sure the path is correct -->
 </body>
