@@ -1,9 +1,10 @@
 body {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    transition: all 0.4s;
-    height: 100vh; /* Ensures body takes full height of the screen */
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    box-sizing: border-box;
     font-family: sans-serif;
 }
 
@@ -14,7 +15,7 @@ body {
     justify-content: space-between;
     align-items: center;
     font-family: sans-serif;
-    background-color: black;
+    background-color: white;
 }
 
 /* Logo Styling */
@@ -40,7 +41,7 @@ body {
    width:2.5rem;
    height: 2px;
    margin-bottom: 10px;
-   background-color: white;
+   background-color:  rgb(77, 97, 184);
    cursor: pointer;
 }
 
@@ -49,7 +50,7 @@ body {
     width: 94%;
     top: 6rem;
     left: 18px;
-    background-color: black;
+    background-color:  rgb(77, 97, 184);
     font-weight: 600;
 
 }
@@ -57,9 +58,10 @@ body {
     display: block;
     text-align: center;
     padding: 5px 0;
+    color: black ;
 }
 .nav-menu a:hover{
-    background-color: grey;
+    background-color:  rgb(77, 97, 184);
 }
 
 .hide{
@@ -83,7 +85,7 @@ body {
         padding: 15px 20px;
     }
     .nav-menu a:hover{
-        background-color: grey;
+        background-color:  rgb(77, 97, 184);
         border-radius: 5px;
     }
     .hamburger-menu{
@@ -91,9 +93,24 @@ body {
     }
 }
 
+.bg {
+    /* The image used */
+    background-image: url("images/ftmback.avif");
+  
+    /* Full height */
+    height: 100%;
+    width: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+
 .top{
     text-align: center;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 /* Slider Wrapper */
@@ -103,7 +120,8 @@ body {
     justify-content: center; /* Horizontally aligns the content */
     align-items: center; /* Vertically aligns the content */
     overflow: hidden;
-    margin: 1rem 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* Slides Container */
@@ -188,32 +206,16 @@ body {
 }
 
 
-/* Half-container with two sections: Image and Content */
-.half-container {
-    display: flex;
-    height: 100vh;  /* Full height for the container */
-    width: 100%;  /* Full width of the screen */
-}
 
-/* Image Section */
-.image {
-    flex: 1;
-    background-image: url("ftm backsplash.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
-    min-height: 100%;  /* Ensures it takes up space */
-}
+
 .topheader {
-    background-color: grey;
+    background-color: rgb(77, 97, 184);
     font-family: sans-serif;
     display: flex;
     justify-content: space-between; /* Ensures left and right alignment */
     align-items: center; /* Aligns items vertically */
     padding: 0 1rem; /* Adds some padding for spacing */
-    color: black;
+    color: white;
     
 }
 .left{
@@ -230,35 +232,6 @@ a{
     font-weight: bold;
 }
 
-
-.content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; /* Keeps the text aligned to the left */
-    padding: 2rem;
-    background-color: rgba(52, 149, 187, 0.767);
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
-    gap: 1rem; /* Adds space between elements */
-}
-
-.main-title {
-    font-family: 'Sans-serif', Verdana;
-    font-size: 3rem;
-    color: black;
-    margin-bottom: 0.5rem;
-}
-
-.subtitle {
-    font-family: 'Sans-serif', Verdana;
-    font-size: 1.5rem;
-    color: black;
-    text-align: right;
-    width: 100%; /* Ensure the subtitle spans the content width */
-    margin-bottom: 1rem;
-}
 
 /* Button styling */
 .content button {
