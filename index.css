@@ -1,0 +1,229 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.top{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px black;
+}
+
+.topheader {
+    background-color: rgb(26, 78, 175);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between; /* Ensures left and right alignment */
+    align-items: center; /* Aligns items vertically */
+    padding: 0 1rem; /* Adds some padding for spacing */
+    color: white;
+    
+}
+.left{
+    margin-left: 0;
+}
+.right{
+    margin-right: 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* navbar styling */
+.navbar{
+    display: flex;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: white;
+}
+
+/* Logo Styling */
+.logo img {
+    width: 3rem;
+    height: 3rem;
+    margin-left: auto;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space between the logo and nav links */
+    flex-shrink: 0; 
+}
+.hamburger-menu{
+    padding-right: 1.5rem;
+    cursor: pointer;
+}
+
+.hamburger-menu .line{
+   display: block;
+   width:2.5rem;
+   height: 2px;
+   margin-bottom: 10px;
+   background-color:  rgb(26, 78, 175);
+   cursor: pointer;
+}
+
+.nav-menu{
+    position: fixed;
+    width: 94%;
+    top: 6rem;
+    left: 18px;
+    background-color:  rgb(26, 78, 175);
+    font-weight: 600;
+
+}
+.nav-menu a{
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+    color: rgb(0, 0, 0) ;
+}
+.nav-menu a:hover{
+    background-color:  rgb(26, 78, 175);
+}
+
+.hide{
+    display: none;
+}
+
+/* for Desktop view  */
+@media screen and (min-width:600px){
+    .navbar{
+        justify-content: space-around;
+    }
+    .nav-menu{
+        display: block;
+        position: static;
+        width: auto;
+        margin-right:20px;
+        background: none;
+    }
+    .nav-menu a{
+        display: inline-block;
+        padding: 15px 20px;
+    }
+    .nav-menu a:hover{
+        background-color: rgb(26, 78, 175);
+        border-radius: 5px;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+}
+
+.bg {
+    min-height: 100vh; /* Full viewport height */
+    background-image: url("images/ftmback.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  /* Carousel Container */
+  .carousel-container {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  /* Carousel Slide */
+  .carousel-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-slide img {
+    width: 85%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 2%;
+  }
+  
+  /* Arrows */
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
+  .carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+
+/* Button styling */
+.content{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.content button {
+    width: 200px;
+    height: 50px;
+    font-size: 1.2rem;
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    border: 3px solid rgb(26, 78, 175);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.content button:hover {
+    background-color: rgba(245, 245, 245, 0.712);
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .content button {
+        width: 120px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
