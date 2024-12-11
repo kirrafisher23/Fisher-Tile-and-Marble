@@ -8,6 +8,36 @@ body {
     font-family: sans-serif;
 }
 
+.top{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px black;
+}
+
+.topheader {
+    background-color: rgb(26, 78, 175);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between; /* Ensures left and right alignment */
+    align-items: center; /* Aligns items vertically */
+    padding: 0 1rem; /* Adds some padding for spacing */
+    color: white;
+    
+}
+.left{
+    margin-left: 0;
+}
+.right{
+    margin-right: 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
 /* navbar styling */
 .navbar{
     display: flex;
@@ -41,7 +71,7 @@ body {
    width:2.5rem;
    height: 2px;
    margin-bottom: 10px;
-   background-color:  rgb(77, 97, 184);
+   background-color:  rgb(26, 78, 175);
    cursor: pointer;
 }
 
@@ -50,7 +80,7 @@ body {
     width: 94%;
     top: 6rem;
     left: 18px;
-    background-color:  rgb(77, 97, 184);
+    background-color:  rgb(26, 78, 175);
     font-weight: 600;
 
 }
@@ -58,10 +88,10 @@ body {
     display: block;
     text-align: center;
     padding: 5px 0;
-    color: black ;
+    color: rgb(0, 0, 0) ;
 }
 .nav-menu a:hover{
-    background-color:  rgb(77, 97, 184);
+    background-color:  rgb(26, 78, 175);
 }
 
 .hide{
@@ -85,7 +115,7 @@ body {
         padding: 15px 20px;
     }
     .nav-menu a:hover{
-        background-color:  rgb(77, 97, 184);
+        background-color: rgb(26, 78, 175);
         border-radius: 5px;
     }
     .hamburger-menu{
@@ -94,155 +124,92 @@ body {
 }
 
 .bg {
-    /* The image used */
+    min-height: 100vh; /* Full viewport height */
     background-image: url("images/ftmback.avif");
-  
-    /* Full height */
-    height: 100%;
-    width: 100%;
-  
-    /* Center and scale the image nicely */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+  }
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
   }
   
-
-.top{
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
-
-/* Slider Wrapper */
-.slider-wrapper {
-    position: relative;
+  /* Carousel Container */
+  .carousel-container {
     display: flex;
-    justify-content: center; /* Horizontally aligns the content */
-    align-items: center; /* Vertically aligns the content */
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-/* Slides Container */
-.slides-container {
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  /* Carousel Slide */
+  .carousel-slide {
+    min-width: 100%;
     display: flex;
-    overflow: hidden;
-    scroll-behavior: smooth; /* Smooth scrolling for transitions */
-    width: 100%; /* Full width of the container */
-}
-
-/* Slide Items */
-.slide {
-    flex: 0 0 100%; /* Each slide takes up full container width */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-slide img {
+    width: 85%;
     height: auto;
-    display: flex;
-    justify-content: center; /* Center content */
-    align-items: center; /* Center content */
-}
-
-
-/* Image Styling */
-.slide img {
-    max-width: 100%; /* Prevents images from becoming too large */
-    max-height: 80vh; /* Ensures images don’t overflow the viewport */
-    width: auto;      /* Maintain aspect ratio */
-    height: auto;     /* Maintain aspect ratio */
-    object-fit: contain; /* Adjusts image to fit within its container */
-    border-radius: 5%;
-}
-
-/* Adjust Arrow Styles */
-.slide-arrow {
+    object-fit: cover;
+    border-radius: 2%;
+  }
+  
+  /* Arrows */
+  .carousel-arrow {
     position: absolute;
-    top: 50%; /* Centers the arrows vertically */
-    transform: translateY(-50%); /* Perfect vertical centering */
-    background-color: rgba(255, 255, 255, 0.8);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     border: none;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
+    font-size: 2rem;
     cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
-    opacity: 0.5;
-    transition: opacity 0.3s;
-}
-
-.slide-arrow:hover {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
-}
-
-#slide-arrow-prev {
-    left: 1rem;
-}
-
-#slide-arrow-next {
-    right: 1rem;
-}
-
-/* Mobile View Adjustments */
-@media (max-width: 600px) {
-    .slide-arrow {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.5rem;
-    }
-
-    #slide-arrow-prev {
-        left: 0.5rem;
-    }
-
-    #slide-arrow-next {
-        right: 0.5rem;
-    }
-
-    .slide img {
-        max-width: 90%; /* Adjust max width for mobile view */
-    }
-}
-
-
-
-
-.topheader {
-    background-color: rgb(77, 97, 184);
-    font-family: sans-serif;
-    display: flex;
-    justify-content: space-between; /* Ensures left and right alignment */
-    align-items: center; /* Aligns items vertically */
-    padding: 0 1rem; /* Adds some padding for spacing */
-    color: white;
-    
-}
-.left{
-    margin-left: 0;
-}
-.right{
-    margin-right: 0;
-}
-
-a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
+  .carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 
 
 /* Button styling */
+.content{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
 .content button {
-    align-self: center; /* Aligns the button to the right */
     width: 200px;
     height: 50px;
     font-size: 1.2rem;
     color: black;
     background-color: white;
     border-radius: 8px;
-    border: 2px solid grey;
+    border: 3px solid rgb(26, 78, 175);
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }

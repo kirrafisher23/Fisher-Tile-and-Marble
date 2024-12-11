@@ -4,89 +4,72 @@ const navMenu = document.querySelector('.nav-menu');
 hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('hide');
 });
-const slidesContainer = document.getElementById("slides-container");
-const slides = document.querySelectorAll(".slide");
-const prevButton = document.getElementById("slide-arrow-prev");
-const nextButton = document.getElementById("slide-arrow-next");
 
-let currentIndex = slides.length; // Start at the first real slide
-const slideWidth = slides[0].clientWidth; // Width of a single slide
-let autoScrollInterval; // To store the auto-scroll interval
-let autoScrollPaused = false; // Tracks if auto-scroll is paused
+const carouselContainer = document.querySelector('.carousel-container');
+const slides = document.querySelectorAll('.carousel-slide');
+const prevButton = document.getElementById('carousel-prev');
+const nextButton = document.getElementById('carousel-next');
 
-// Clone slides for infinite scrolling
-slides.forEach((slide) => {
-    const clone = slide.cloneNode(true);
-    slidesContainer.appendChild(clone); // Add to the end
-});
+let currentIndex = 0;
+let autoScrollInterval;
+let isAutoScrolling = true;
 
-slides.forEach((slide) => {
-    const clone = slide.cloneNode(true);
-    slidesContainer.prepend(clone); // Add to the beginning
-});
-
-// Ensure the initial position is at the first real slide
-slidesContainer.scrollLeft = slideWidth * slides.length;
+// Function to update the carousel position
+const updateCarousel = () => {
+  const slideWidth = slides[0].clientWidth;
+  carouselContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+};
 
 // Function to move to the next slide
-const moveToNextSlide = () => {
-    currentIndex++;
-    slidesContainer.scrollLeft += slideWidth;
-
-    if (currentIndex >= slides.length * 2) {
-        // Seamlessly reset to the first real slide
-        slidesContainer.scrollLeft = slideWidth * slides.length;
-        currentIndex = slides.length;
-    }
+const nextSlide = () => {
+  currentIndex = (currentIndex + 1) % slides.length; // Loop back to the first slide
+  updateCarousel();
 };
 
 // Function to move to the previous slide
-const moveToPrevSlide = () => {
-    currentIndex--;
-    slidesContainer.scrollLeft -= slideWidth;
-
-    if (currentIndex < slides.length) {
-        // Seamlessly reset to the last real slide
-        slidesContainer.scrollLeft = slideWidth * (slides.length * 2 - 1);
-        currentIndex = slides.length * 2 - 1;
-    }
+const prevSlide = () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Loop back to the last slide
+  updateCarousel();
 };
 
-// Event listeners for buttons
-nextButton.addEventListener("click", () => {
-    stopAutoScroll(); // Stop auto-scroll when user interacts
-    moveToNextSlide();
-    startAutoScroll(); // Restart auto-scroll
+// Event Listeners for Buttons
+nextButton.addEventListener('click', () => {
+  stopAutoScroll(); // Stop auto-scroll on user interaction
+  nextSlide();
+  startAutoScroll(); // Resume auto-scroll
 });
 
-prevButton.addEventListener("click", () => {
-    stopAutoScroll(); // Stop auto-scroll when user interacts
-    moveToPrevSlide();
-    startAutoScroll(); // Restart auto-scroll
+prevButton.addEventListener('click', () => {
+  stopAutoScroll(); // Stop auto-scroll on user interaction
+  prevSlide();
+  startAutoScroll(); // Resume auto-scroll
 });
 
-// Pause or resume auto-scroll on tap
-slidesContainer.addEventListener("click", () => {
-    if (autoScrollPaused) {
-        startAutoScroll(); // Resume auto-scroll
-    } else {
-        stopAutoScroll(); // Pause auto-scroll
-    }
-    autoScrollPaused = !autoScrollPaused; // Toggle the pause state
-});
-
-// Auto-scroll for infinite loop
+// Auto-Scroll Functions
 const startAutoScroll = () => {
-    stopAutoScroll(); // Clear any existing interval
-    autoScrollInterval = setInterval(() => {
-        moveToNextSlide();
-    }, 3500); // Change slides every 3 seconds
+  stopAutoScroll(); // Clear any existing interval before starting a new one
+  autoScrollInterval = setInterval(() => {
+    nextSlide();
+  }, 3000); // Change slides every 3 seconds
+  isAutoScrolling = true; // Update state
 };
 
-// Stop auto-scroll
 const stopAutoScroll = () => {
-    clearInterval(autoScrollInterval);
+  clearInterval(autoScrollInterval);
+  isAutoScrolling = false; // Update state
 };
 
-// Start auto-scroll on page load
+// Tap-to-Pause and Resume
+carouselContainer.addEventListener('click', () => {
+  if (isAutoScrolling) {
+    stopAutoScroll();
+  } else {
+    startAutoScroll();
+  }
+});
+
+// Ensure correct positioning on window resize
+window.addEventListener('resize', updateCarousel);
+
+// Start the auto-scroll when the page loads
 startAutoScroll();

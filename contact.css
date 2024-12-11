@@ -46,6 +46,68 @@ a{
     font-weight: bold;
 }
 
+.contactMe{
+    display: block;
+    background-color: white;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 10px 10px 5px black;
+    text-align: center;
+    width: 600px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+        .contactMe {
+            width: 90%; /* Adjust width to fit smaller screens */
+            max-width: 400px; /* Prevent it from becoming too wide */
+            margin-top: 100px; /* Adjust margin for better spacing */
+
+    }
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.top{
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.topheader {
+    background-color: rgb(26, 78, 175);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between; /* Ensures left and right alignment */
+    align-items: center; /* Aligns items vertically */
+    padding: 0 1rem; /* Adds some padding for spacing */
+    color: white;
+    
+}
+.left{
+    margin-left: 0;
+}
+.right{
+    margin-right: 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
 /* navbar styling */
 .navbar{
     display: flex;
@@ -53,15 +115,14 @@ a{
     justify-content: space-between;
     align-items: center;
     font-family: sans-serif;
-    background-color: black;
+    background-color: white;
 }
 
-
-/* logo style  */
-.logo img{
+/* Logo Styling */
+.logo img {
     width: 3rem;
     height: 3rem;
-    margin-left:0;
+    margin-left: auto;
 }
 
 .logo{
@@ -80,7 +141,7 @@ a{
    width:2.5rem;
    height: 2px;
    margin-bottom: 10px;
-   background-color: white;
+   background-color:  rgb(26, 78, 175);
    cursor: pointer;
 }
 
@@ -89,7 +150,7 @@ a{
     width: 94%;
     top: 6rem;
     left: 18px;
-    background-color: black;
+    background-color:  rgb(26, 78, 175);
     font-weight: 600;
 
 }
@@ -97,9 +158,10 @@ a{
     display: block;
     text-align: center;
     padding: 5px 0;
+    color: rgb(0, 0, 0) ;
 }
 .nav-menu a:hover{
-    background-color: grey;
+    background-color:  rgb(26, 78, 175);
 }
 
 .hide{
@@ -123,32 +185,173 @@ a{
         padding: 15px 20px;
     }
     .nav-menu a:hover{
-        background-color: grey;
+        background-color: rgb(26, 78, 175);
         border-radius: 5px;
     }
     .hamburger-menu{
         display: none;
     }
 }
-.contactMe{
-    display: block;
-    background-color: white;
-    border-radius: 10px;
+
+.bg {
+    min-height: 100vh; /* Full viewport height */
+    background-image: url("images/ftmback.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+/* Slider Wrapper */
+.slider-wrapper {
+    display: flex;
     justify-content: center;
-    box-shadow: 10px 10px 5px grey;
-    text-align: center;
-    width: 600px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+    align-items: center;
+    overflow: hidden; /* Hide extra slides */
+    width: 100%;
+    position: relative;
 }
 
-@media only screen and (max-width: 600px) {
-        .contactMe {
-            width: 90%; /* Adjust width to fit smaller screens */
-            max-width: 400px; /* Prevent it from becoming too wide */
-            margin-top: 100px; /* Adjust margin for better spacing */
+.slides-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Ensure no overflow outside container */
+    width: 100%; /* Match parent width */
+    scroll-behavior: smooth;
+    margin: 0 auto; /* Center container */
+    padding: 0; /* Ensure no extra space */
+    position: relative;
+}
 
+.slide {
+    flex: 0 0 100%; /* Each slide takes full width */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin: 0; /* Remove margins */
+    padding: 0; /* Remove paddings */
+    position: relative;
+}
+
+
+.slide img {
+    max-width: 100%; /* Image scales to fit the slide */
+    max-height: 80vh; /* Prevent image from being too tall */
+    margin: 0; /* No spacing around the image */
+    padding: 0; /* No inner spacing for image */
+    object-fit: cover; /* Maintain aspect ratio while filling */
+    display: block; /* Prevent inline element spacing issues */
+    border-radius: 2%; /* Slight rounding for aesthetic */
+}
+
+
+
+/* Arrows */
+.slide-arrow {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    z-index: 1000; /* Place above slides */
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+#slide-arrow-prev {
+    left: 15px; /* Adjust padding from the left */
+}
+
+#slide-arrow-next {
+    right: 15px; /* Adjust padding from the right */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .slide-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    #slide-arrow-prev {
+        left: 10px;
+    }
+
+    #slide-arrow-next {
+        right: 10px;
+    }
+
+    .slide img {
+        max-width: 90%;
+    }
+}
+
+/* Debugging Borders - Remove for Production */
+.slides-container {
+    border: 2px solid red; /* Show container boundary */
+}
+
+.slide {
+    border: 2px solid blue; /* Show slide boundary */
+}
+
+.slide img {
+    border: 2px solid green; /* Show image boundary */
+}
+
+/* Debugging borders */
+.slides-container {
+    border: 2px solid red; /* Show container boundary */
+}
+
+.slide {
+    border: 2px solid blue; /* Show slide boundary */
+}
+
+.slide img {
+    border: 2px solid green; /* Show image boundary */
+}
+
+
+
+/* Button styling */
+.content{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.content button {
+    width: 200px;
+    height: 50px;
+    font-size: 1.2rem;
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    border: 3px solid rgb(26, 78, 175);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.content button:hover {
+    background-color: rgba(245, 245, 245, 0.712);
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .content button {
+        width: 120px;
+        height: 45px;
+        font-size: 1rem;
     }
 }

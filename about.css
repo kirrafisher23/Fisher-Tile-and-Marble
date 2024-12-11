@@ -1,47 +1,50 @@
-/* Global Styles */
 body {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: steelblue;
-    transition: all 0.4s;
-    height: 100vh; /* Ensures body takes full height of the screen */
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-/* Header Section */
+.top{
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
 .topheader {
-    background-color: grey;
+    background-color: rgb(26, 78, 175);
     font-family: sans-serif;
     display: flex;
     justify-content: space-between; /* Ensures left and right alignment */
     align-items: center; /* Aligns items vertically */
-    padding: 0 1rem; /* Adds padding */
-    color: black;
+    padding: 0 1rem; /* Adds some padding for spacing */
+    color: white;
+    
 }
-
-.left {
+.left{
     margin-left: 0;
 }
-
-.right {
+.right{
     margin-right: 0;
 }
 
-a {
+a{
     text-decoration: none;
     color: white;
     font-size: 1.3rem;
     font-weight: bold;
 }
 
-/* Navbar Styling */
-.navbar {
+/* navbar styling */
+.navbar{
     display: flex;
     height: 4rem;
     justify-content: space-between;
     align-items: center;
     font-family: sans-serif;
-    background-color: black;
+    background-color: white;
 }
 
 /* Logo Styling */
@@ -51,72 +54,129 @@ a {
     margin-left: auto;
 }
 
-/* Hamburger Menu */
-.hamburger-menu {
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space between the logo and nav links */
+    flex-shrink: 0; 
+}
+.hamburger-menu{
     padding-right: 1.5rem;
     cursor: pointer;
 }
 
-.hamburger-menu .line {
-    display: block;
-    width: 2.5rem;
-    height: 2px;
-    margin-bottom: 10px;
-    background-color: white;
-    cursor: pointer;
+.hamburger-menu .line{
+   display: block;
+   width:2.5rem;
+   height: 2px;
+   margin-bottom: 10px;
+   background-color:  rgb(26, 78, 175);
+   cursor: pointer;
 }
 
-/* Nav Menu */
-.nav-menu {
+.nav-menu{
     position: fixed;
     width: 94%;
     top: 6rem;
     left: 18px;
-    background-color: black;
+    background-color:  rgb(26, 78, 175);
     font-weight: 600;
-}
 
-.nav-menu a {
+}
+.nav-menu a{
     display: block;
     text-align: center;
     padding: 5px 0;
+    color: rgb(0, 0, 0) ;
+}
+.nav-menu a:hover{
+    background-color:  rgb(26, 78, 175);
 }
 
-.nav-menu a:hover {
-    background-color: grey;
-}
-
-.hide {
+.hide{
     display: none;
 }
 
-/* Desktop View Adjustments */
-@media screen and (min-width: 600px) {
-    .navbar {
+/* for Desktop view  */
+@media screen and (min-width:600px){
+    .navbar{
         justify-content: space-around;
     }
-
-    .nav-menu {
+    .nav-menu{
         display: block;
         position: static;
         width: auto;
-        margin-right: 20px;
+        margin-right:20px;
         background: none;
     }
-
-    .nav-menu a {
+    .nav-menu a{
         display: inline-block;
         padding: 15px 20px;
     }
-
-    .nav-menu a:hover {
-        background-color: grey;
+    .nav-menu a:hover{
+        background-color: rgb(26, 78, 175);
         border-radius: 5px;
     }
-
-    .hamburger-menu {
+    .hamburger-menu{
         display: none;
     }
 }
 
+.bg {
+    min-height: 100vh; /* Full viewport height */
+    background-image: url("images/ftmback.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
+.toptext{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+.maintext{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+.bullet{
+    text-align: left;
+    color: #F5F5DC;
+    text-shadow: 2px 2px 2px black;
+}
+
+/* Button styling */
+.content{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.content button {
+    width: 200px;
+    height: 50px;
+    font-size: 1.2rem;
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    border: 3px solid rgb(26, 78, 175);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.content button:hover {
+    background-color: rgba(245, 245, 245, 0.712);
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .content button {
+        width: 120px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
