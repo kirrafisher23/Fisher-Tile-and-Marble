@@ -173,13 +173,13 @@ a{
     cursor: pointer;
     z-index: 10;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  
+
   .left-arrow {
     left: 10px;
   }
@@ -189,7 +189,7 @@ a{
   }
   
   .carousel-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(26, 78, 175);
   }
 
 
