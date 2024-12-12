@@ -193,6 +193,25 @@ a{
   }
 
 
+  @media (max-width: 600px) {
+    .carousel-arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 1.5rem;
+        background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity */
+    }
+    .carousel-arrow:hover {
+        background-color: rgb(26, 78, 175);
+    }
+    .left-arrow {
+        left: 5px; /* Bring closer to the edge */
+    }
+    .right-arrow {
+        right: 5px;
+    }
+}
+
+
 /* Button styling */
 .content{
     display: flex;
