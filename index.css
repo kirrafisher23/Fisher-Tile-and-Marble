@@ -123,13 +123,25 @@ a{
     }
 }
 
+.maintext{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
 .bg {
     min-height: 100vh; /* Full viewport height */
     background-image: url("images/ftmback.avif");
-    background-size: cover;
+    background-size: contain no-repeat;
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  .bullet{
+    text-align: center;
+    color: #F5F5DC;
+    text-shadow: 2px 2px 2px black;
+}
 
 /* Carousel Wrapper */
 .carousel-wrapper {
@@ -173,13 +185,13 @@ a{
     cursor: pointer;
     z-index: 10;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
+  
   .left-arrow {
     left: 10px;
   }
@@ -189,27 +201,8 @@ a{
   }
   
   .carousel-arrow:hover {
-    background-color: rgb(26, 78, 175);
+    background-color: rgba(0, 0, 0, 0.8);
   }
-
-
-  @media (max-width: 600px) {
-    .carousel-arrow {
-        width: 30px;
-        height: 30px;
-        font-size: 1.5rem;
-        background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity */
-    }
-    .carousel-arrow:hover {
-        background-color: rgb(26, 78, 175);
-    }
-    .left-arrow {
-        left: 5px; /* Bring closer to the edge */
-    }
-    .right-arrow {
-        right: 5px;
-    }
-}
 
 
 /* Button styling */
