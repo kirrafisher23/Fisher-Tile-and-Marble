@@ -1,76 +1,3 @@
-
-body {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    transition: all 0.4s;
-    height: 100vh; /* Ensures body takes full height of the screen */
-}
-h2{
-    color: black;
-}
-
-/* .contactMe a:link {
-    color: black;
-  }
-    
-  
-  .contactMe a:hover {
-    color: rgb(0, 170, 255);
-  }
-  
-  
-  .contactMe a:active {
-    color:  rgb(0, 170, 255);
-  } */
-
-
-
-.topheader {
-    background-color: grey;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: space-between; /* Ensures left and right alignment */
-    align-items: center; /* Aligns items vertically */
-    padding: 0 1rem; /* Adds some padding for spacing */
-    color: black;
-}
-.left{
-    margin-left: 0;
-}
-.right{
-    margin-right: 0;
-}
-a{
-    text-decoration: none;
-    color: white;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
-.contactMe{
-    display: flex;
-    background-color: white;
-    border-radius: 10px;
-    justify-content: center;
-    box-shadow: 10px 10px 5px black;
-    text-align: center;
-    width: 600px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-}
-
-@media only screen and (max-width: 600px) {
-        .contactMe {
-            width: 90%; /* Adjust width to fit smaller screens */
-            max-width: 400px; /* Prevent it from becoming too wide */
-            margin-top: 100px; /* Adjust margin for better spacing */
-
-    }
-}
-
 body {
     padding: 0;
     margin: 0;
@@ -78,16 +5,30 @@ body {
     width: 100%;
     overflow-x: hidden; /* Prevent horizontal overflow */
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-weight:normal;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+
 }
+
+h2{
+    color: black;
+}
+
 
 .top{
     text-align: center;
     color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px black;
 }
 
 .topheader {
-    background-color: rgb(26, 78, 175);
+    background-color: rgb(82, 138, 146);
     font-family: sans-serif;
     display: flex;
     justify-content: space-between; /* Ensures left and right alignment */
@@ -117,7 +58,7 @@ a{
     justify-content: space-between;
     align-items: center;
     font-family: sans-serif;
-    background-color: white;
+    background-color: rgb(179, 179, 179);
 }
 
 /* Logo Styling */
@@ -143,7 +84,7 @@ a{
    width:2.5rem;
    height: 2px;
    margin-bottom: 10px;
-   background-color:  rgb(26, 78, 175);
+   background-color: rgb(82, 138, 146);
    cursor: pointer;
 }
 
@@ -152,7 +93,7 @@ a{
     width: 94%;
     top: 6rem;
     left: 18px;
-    background-color:  rgb(26, 78, 175);
+    background-color:  rgb(82, 138, 146);
     font-weight: 600;
 
 }
@@ -163,7 +104,7 @@ a{
     color: rgb(0, 0, 0) ;
 }
 .nav-menu a:hover{
-    background-color:  rgb(26, 78, 175);
+    background-color:  rgb(82, 138, 146);
 }
 
 .hide{
@@ -187,7 +128,7 @@ a{
         padding: 15px 20px;
     }
     .nav-menu a:hover{
-        background-color: rgb(26, 78, 175);
+        background-color: rgb(82, 138, 146);
         border-radius: 5px;
     }
     .hamburger-menu{
@@ -195,14 +136,35 @@ a{
     }
 }
 
-.bg {
-    min-height: 100vh; /* Full viewport height */
-    background-image: url("images/ftmback.avif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+		/* Main content wrapper */
+        .main {
+            flex: 1; /* This wrapper takes the remaining space */
+            display: flex;
+            flex-direction: column; /* Ensures content stacks vertically */
+            align-items: center; /* Center aligns items like .contactMe */
+            padding: 10px 0; /* Add spacing above and below */
+        }
+        
+        /* Update .contactMe to control its own size */
+        .contactMe {
+            width: 600px; /* Keep the width fixed */
+            background-color: rgb(179, 179, 179);
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px rgba(82, 138, 146, 0.884);
+            text-align: center;
+            padding: 20px; /* Add padding inside */
+            margin: 0 auto; /* Center it horizontally */
+        }
+        
 
+@media only screen and (max-width: 600px) {
+        .contactMe {
+            width: 90%; /* Adjust width to fit smaller screens */
+            max-width: 400px; /* Prevent it from becoming too wide */
+            margin-top: 25px; /* Adjust margin for better spacing */
+
+    }
+}
 
 /* Button styling */
 .content{
@@ -297,6 +259,12 @@ input[type=text], select, textarea {
   h1{
     justify-content: center;
     align-items: center;
-    color: white;
-    text-shadow: 2px 2px 2px black;
+    color: black;
   }
+
+  .footer {
+    background-color: rgb(82, 138, 146); /* Matches your topheader */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 10px; /* Space inside the footer */
+}

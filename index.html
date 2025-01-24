@@ -7,93 +7,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fisher Tile and Marble</title>
     <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div class="bg">
-        <header>
-            <div class="row">
-                <div class="col">
-                    <div class="topheader">
-                        <h3 class="left">EST 1997</h3>
-                        <h3 class="right">(321) 543-0235</h3>
-                    </div>
-                </div>
+  <header>
+    <div class="row">
+        <div class="col">
+            <div class="topheader">
+                <h3 class="left">EST 1997</h3>
+                <h3 class="right"><a href="tel:+13215430235">321-543-0235</a></h3>
             </div>
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="images/logo.png" alt="ftmLogo">
-                    </a>
-                </div>
-                <div class="hamburger-menu">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </div>
-                <div class="nav-menu hide">
-                    <a class="active" href="index.html">Home</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="about.html">About</a>
-                </div>
-            </nav>
-        </header>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="ftmLogo">
+            </a>
+        </div>
+        <div class="hamburger-menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <div class="nav-menu hide">
+            <a href="index.html">Home</a>
+            <a href="showroom.html">Showroom</a>
+            <a href="contact.html">Contact</a>
+            <a class="active" href="about.html">About</a>
+        </div>
+    </nav>
+</header>
 
         <div class="top">
             <h1>Fisher Tile and Marble</h1>
             <h1>Brevard’s Premier Tile Contracting Service</h1>
         </div>
 
-        <div class="carousel-wrapper">
-            <button class="carousel-arrow left-arrow" id="carousel-prev">&#8249;</button>
-            <div class="carousel-container">
-              <div class="carousel-slide">
-                <img src="images/1.jpg" alt="Image 1" />
-              </div>
-              <div class="carousel-slide">
-                <img src="images/2.jpg" alt="Image 2" />
-              </div>
-              <div class="carousel-slide">
-                <img src="images/4.jpg" alt="Image 3" />
-              </div>
-              <div class="carousel-slide">
-                <img src="images/5.jpg" alt="Image 3" />
-              </div>
-              <div class="carousel-slide">
-                <img src="images/6.jpg" alt="Image 3" />
-              </div>
-              <div class="carousel-slide">
-                <img src="images/7.jpg" alt="Image 3" />
-              </div>
-            </div>
-            <button class="carousel-arrow right-arrow" id="carousel-next">&#8250;</button>
+        <div class="row2">
+          <div class="column">
+            <img src="images/1.jpg">
+            <img src="images/2.jpg">
           </div>
+          <div class="column">
+            <img src="images/3.jpg">
+            <img src="images/4.jpg">
+          </div>
+          <div class="column">
+            <img src="images/5.jpg">
+            <img src="images/6.jpg">
+          </div>
+        </div>
 
             <div class="maintext">
               <h3>Where craftsmanship meets over 25 years of experience and dedication to excellence. Proudly serving Brevard County as a licensed and insured tile contracting business under our trusted LLC, we have built a reputation for turning ideas into reality with unmatched precision and attention to detail.
-                <br> Our services include:
+                <br> My services include:
                   <div class="bullet">
-                      <ul>
-                          <li>Custom Tile Designs: Unique patterns and layouts that elevate any space.</li>
-                          <li>Wood Flooring Installations: Durable, beautiful floors crafted to last.</li>
-                          <li>Kitchen Backsplash Remodels: From classic to contemporary, designs that add style and function.</li>
-                      </ul> 
+                      
+                          <h3>Custom Tile Designs: Unique patterns and layouts that elevate any space.</h3><br>
+                          <h3>Wood Flooring Installations: Durable, beautiful floors crafted to last.</h3><br>
+                          <h3>Kitchen Backsplash Remodels: From classic to contemporary, designs that add style and function.</h3><br>
+                      
                   </div>
-                  Whether you’re envisioning a sleek, modern aesthetic or timeless, traditional charm, our expertise ensures your space will not only meet but exceed your expectations. At Fisher Tile and Marble, every project is personal. We understand the importance of your home and work closely with you to create durable, beautiful transformations you’ll love for years to come.
+                  At Fisher Tile and Marble, every project is personal. I understand the importance of your home and work closely with you to create durable, beautiful transformations you’ll love for years to come.
                   Let’s bring your vision to life—contact us today to get started!</h3>
+                  <div class="content">
+                    <button onclick="location.href='contact.html'">Contact Me!</button>
+                </div>
+            </div>
           </div>
 
-        <div class="content">
-            <button onclick="location.href='contact.html'">Contact Me!</button>
-        </div>
-    </div>
-      <div class="row">
-        <div class="col">
+          <footer>
             <div class="topheader">
                 <h3 class="left">EST 1997</h3>
-                <h3 class="right">(321) 543-0235</h3>
+                <h3 class="right"><a href="tel:+13215430235">321-543-0235</a></h3>
             </div>
-        </div>
-      </div>
+        </footer>
+
     <script src="index.js"></script>
 </body>
 </html>

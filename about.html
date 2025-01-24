@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fisher Tile and Marble</title>
     <link rel="stylesheet" href="about.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div class="bg">
     <header>
         <div class="row">
             <div class="col">
                 <div class="topheader">
                     <h3 class="left">EST 1997</h3>
-                    <h3 class="right">(321) 543-0235</h3>
+                    <h3 class="right"><a href="tel:+13215430235">321-543-0235</a></h3>
                 </div>
             </div>
         </div>
@@ -23,8 +27,7 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png"
-                         alt="ftmLogo">
+                    <img src="images/logo.png" alt="ftmLogo">
                 </a>
             </div>
             <div class="hamburger-menu">
@@ -34,33 +37,35 @@
             </div>
             <div class="nav-menu hide">
                 <a href="index.html">Home</a>
+                <a href="showroom.html">Showroom</a>
                 <a href="contact.html">Contact</a>
                 <a class="active" href="about.html">About</a>
             </div>
         </nav>
-        
-        <div class="toptext">
-            <h1>About Fisher Tile and Marble</h1>
-        </div>
+    </header>
+
+    <div class="toptext">
+        <h1>About Fisher Tile and Marble</h1>
+    </div>
+
+    <div class="main">
 
         <div class="maintext">
-            <h1><strong>Something will go in here</strong></h1>
+            <h1>Something will go in here</h1>
+        </div>
 
         <div class="content">
             <button onclick="location.href='contact.html'">Contact Me!</button>
         </div>
+    </div>
 
-    </header>
-  
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="topheader">
-                <h3 class="left">EST 1997</h3>
-                <h3 class="right">(321) 543-0235</h3>
-            </div>
+    <footer>
+        <div class="topheader">
+            <h3 class="left">EST 1997</h3>
+            <h3 class="right"><a href="tel:+13215430235">321-543-0235</a></h3>
         </div>
-    </div>
-    <script src="about.js"></script> <!-- Make sure the path is correct -->
+    </footer>
+    <script src="index.js"></script>
 </body>
+
 </html>

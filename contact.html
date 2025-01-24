@@ -7,24 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fisher Tile and Marble</title>
     <link rel="stylesheet" href="contact.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <div class="bg">
     <header>
         <div class="row">
             <div class="col">
                 <div class="topheader">
                     <h3 class="left">EST 1997</h3>
-                    <h3 class="right">(321) 543-0235</h3>
+                    <h3 class="right"><a href="tel:+13215430235">321-543-0235</a></h3>
                 </div>
             </div>
         </div>
-
+    
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png"
-                         alt="ftmLogo">
+                    <img src="images/logo.png" alt="ftmLogo">
                 </a>
             </div>
             <div class="hamburger-menu">
@@ -34,45 +37,45 @@
             </div>
             <div class="nav-menu hide">
                 <a href="index.html">Home</a>
-                <a class="active" href="contact.html">Contact</a>
-                <a href="about.html">About</a>
+                <a href="showroom.html">Showroom</a>
+                <a href="contact.html">Contact</a>
+                <a class="active" href="about.html">About</a>
             </div>
         </nav>
     </header>
 
-    <h1><strong>Contact Me</strong></h1>
-    
-    <div class="contactMe">
-        <div class="container">
-            <form target="_blank" action="https://formsubmit.co/mfisher240@gmail.com" method="POST">
-                <input type="hidden" name="_next" value="https://fishertileandmarble.netlify.app/thankyou.html">
-				<input type="hidden" name="_captcha" value="false">
-          
-              <label for="fname"><strong>First Name</strong></label>
-              <input type="text" id="fname" name="firstname" placeholder="Name" required>
-          
-              <label for="email"><strong>Email</strong></label>
-              <input type="text" id="email" name="email" placeholder="Email" required>
-                    
-              <label for="subject"><strong>Subject</strong></label>
-              <textarea id="subject" name="subject" placeholder="Message" required style="height:200px"></textarea>
-          
-              <input type="submit" value="Submit">
-          
-            </form>
-          </div>
-    </div>
-
-
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="topheader">
-                <h3 class="left">EST 1997</h3>
-                <h3 class="right">(321) 543-0235</h3>
+    <div class="main">
+        <h1>Contact Me</h1>
+        <div class="contactMe">
+            <div class="container">
+                <form target="_blank" action="https://formsubmit.co/mfisher240@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="https://fishertileandmarble.netlify.app/thankyou.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
+            
+                <label for="fname"><strong>First Name</strong></label>
+                <input type="text" id="fname" name="firstname" placeholder="Name" required>
+            
+                <label for="email"><strong>Email</strong></label>
+                <input type="text" id="email" name="email" placeholder="Email" required>
+                        
+                <label for="subject"><strong>Subject</strong></label>
+                <textarea id="subject" name="subject" placeholder="Message" required style="height:200px"></textarea>
+            
+                <input type="submit" value="Submit">
+            
+                </form>
             </div>
         </div>
     </div>
-    <script src="contact.js"></script>
+    
+        <footer>
+            <div class="topheader">
+                <h3 class="left">EST 1997</h3>
+                <h3 class="right"><a href="tel:+13215430235">321-543-0235</a></h3>
+            </div>
+        </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
